@@ -1,8 +1,8 @@
-﻿using Bernhoeft.GRT.ContractWeb.Domain.SqlServer.ContractStore.Entities;
+using Bernhoeft.GRT.ContractWeb.Domain.SqlServer.ContractStore.Entities;
 
 namespace Bernhoeft.GRT.Teste.Application.Responses.Queries.v1
 {
-    public class GetAvisosResponse
+    public class GetAvisoResponse
     {
         public int Id { get; set; }
         public bool Ativo { get; set; }
@@ -11,7 +11,7 @@ namespace Bernhoeft.GRT.Teste.Application.Responses.Queries.v1
         public DateTime CriadoEm { get; private set; }
         public DateTime AtualizadoEm { get; set; }
 
-        public static implicit operator GetAvisosResponse(AvisoEntity entity) => new()
+        public static implicit operator GetAvisoResponse(AvisoEntity entity) => new()
         {
             Id = entity.Id,
             Ativo = entity.Ativo,
@@ -22,3 +22,5 @@ namespace Bernhoeft.GRT.Teste.Application.Responses.Queries.v1
         };
     }
 }
+
+

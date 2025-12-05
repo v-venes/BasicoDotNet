@@ -6,5 +6,9 @@
         public bool Ativo { get; set; } = true;
         public string Titulo { get; set; }
         public string Mensagem { get; set; }
+
+        public DateTime CriadoEm { get; private set; } = DateTime.UtcNow;
+        public DateTime AtualizadoEm { get; set; } = DateTime.UtcNow;
+
     }
 }
